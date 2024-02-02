@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driving Eligibilty check</title>
+</head>
+<body>
+  <script>
+// to check if the user can drive 
+// use a while loop to allow the user to see the prompt multiple times 
+while(true){
+// prompt to take the input of age from the user
+ var age = prompt("Enter the age");
+ //convert the input to a number
+ age = parseInt(age);
+ //check if the entered age is a positive number
+ if( !isNaN(age) && age >= 0){
+ //check if the user's age is greater than or equal to 18
+  if (age >= 18){
+    alert("you can drive");
+  } else{
+    alert("Sorry,you not old enough to drive.");
+  }
+  
+ } else{
+    //Log an error if the entered age is negative
+    console.log("Error: Entered  age is negative.");
+    alert("Please entered a valid age(A non-nagative number).");
+  }
+  
+  // Ask the user if they want tosee the prompt again
+  var askAgain = confirm(" Do you want to check again?");
+  //If the user choose not to check again, exit the loop
+  if(!AskAgain){
+    break;
+    
+  
+  }
+}
+  
+</script>
+</body>
+</html>
